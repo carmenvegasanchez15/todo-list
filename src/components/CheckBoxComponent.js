@@ -4,6 +4,7 @@ import {
   Checkbox,
   FormControl,
   FormControlLabel,
+  Typography,
 } from '@mui/material'
 
 export function CheckBoxComponent(props) {
@@ -11,6 +12,7 @@ export function CheckBoxComponent(props) {
 
   const onChangeStatus = (event) => {
     const { name, checked } = event.target
+
     const updateList = list.map((item) => ({
       ...item,
       checked: item.id === name ? checked : item.checked,
@@ -40,7 +42,16 @@ export function CheckBoxComponent(props) {
   return (
     <Box>
       <FormControl>
-        {list?.length ? item : 'No list'}
+        {list?.length ? (
+          item
+        ) : (
+          <Typography
+            style={{ margin: '20px', fontWeight: 'bold' }}
+            variant="h6"
+          >
+            'No element list'
+          </Typography>
+        )}
         {list?.length ? (
           <Button
             onClick={onClickDeleteTask}

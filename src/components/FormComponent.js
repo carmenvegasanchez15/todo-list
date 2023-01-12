@@ -29,7 +29,7 @@ export default function FormComponent() {
             ToDo List
           </Typography>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12} md={6}>
           <Grid
             item
             xs={12}
@@ -42,22 +42,27 @@ export default function FormComponent() {
                 setValue(e.target.value)
               }}
               onKeyDown={handleKeyDown}
+              style={{
+                minWidth: '150px',
+              }}
             />
             <Button
               disabled={!value && true}
               onClick={addItem}
               variant="contained"
+              className="buttonAdd"
               style={{
                 margin: '10px',
                 background: '#ce9ee6',
+                minWidth: '100px',
               }}
             >
-              Add
+              Add task
             </Button>
           </Grid>
           <Grid
             item
-            md={8}
+            md={10}
             xs={12}
             style={{
               display: 'flex',
