@@ -1,5 +1,11 @@
 # Getting Started with Create React App
 
+A small application on a toDo List
+
+Components used: 
+  - ReactJS
+  - Material UI
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
